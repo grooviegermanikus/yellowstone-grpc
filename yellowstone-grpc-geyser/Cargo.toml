@@ -51,6 +51,8 @@ yellowstone-grpc-proto = { workspace = true, features = ["convert", "plugin"] }
 lz4_flex = "0.11.3"
 rand = "0.7.3"
 bytes = "1.3.0"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
 
 
 

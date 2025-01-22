@@ -432,6 +432,7 @@ impl GrpcService {
         blocks_meta_tx: Option<mpsc::UnboundedSender<Message>>,
         broadcast_tx: broadcast::Sender<(CommitmentLevel, Arc<Vec<Message>>)>,
     ) {
+        info!("Starting geyser loop ...");
         const PROCESSED_MESSAGES_MAX: usize = 31;
         const PROCESSED_MESSAGES_SLEEP: Duration = Duration::from_millis(10);
 
