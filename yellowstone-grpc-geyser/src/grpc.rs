@@ -427,7 +427,7 @@ impl GrpcService {
         Ok((snapshot_tx, messages_tx, shutdown))
     }
 
-    async fn geyser_loop(
+    pub async fn geyser_loop(
         mut messages_rx: mpsc::UnboundedReceiver<Message>,
         blocks_meta_tx: Option<mpsc::UnboundedSender<Message>>,
         broadcast_tx: broadcast::Sender<(CommitmentLevel, Arc<Vec<Message>>)>,
