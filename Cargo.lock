@@ -64,18 +64,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "affinity"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "763e484feceb7dd021b21c5c6f81aee06b1594a743455ec7efbf72e6355e447b"
-dependencies = [
- "cfg-if",
- "errno",
- "libc",
- "num_cpus",
-]
-
-[[package]]
 name = "agave-geyser-plugin-interface"
 version = "2.1.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -932,6 +920,17 @@ name = "core-foundation-sys"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
+
+[[package]]
+name = "core_affinity"
+version = "0.8.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a034b3a7b624016c6e13f5df875747cc25f884156aad2abd12b6c46797971342"
+dependencies = [
+ "libc",
+ "num_cpus",
+ "winapi",
+]
 
 [[package]]
 name = "cpufeatures"
@@ -5960,7 +5959,7 @@ checksum = "1e9df38ee2d2c3c5948ea468a8406ff0db0b29ae1ffde1bcf20ef305bcc95c51"
 
 [[package]]
 name = "yellowstone-grpc-client"
-version = "5.0.0"
+version = "5.0.0+solana.2.1.15"
 dependencies = [
  "bytes",
  "futures",
@@ -5973,7 +5972,7 @@ dependencies = [
 
 [[package]]
 name = "yellowstone-grpc-client-simple"
-version = "5.0.0"
+version = "5.0.0+solana.2.1.15"
 dependencies = [
  "anyhow",
  "backoff",
@@ -5998,9 +5997,8 @@ dependencies = [
 
 [[package]]
 name = "yellowstone-grpc-geyser"
-version = "5.0.1"
+version = "5.0.1+solana.2.1.15"
 dependencies = [
- "affinity",
  "agave-geyser-plugin-interface",
  "anyhow",
  "base64 0.22.1",
@@ -6008,6 +6006,7 @@ dependencies = [
  "bs58",
  "cargo-lock",
  "clap",
+ "core_affinity",
  "crossbeam-channel",
  "futures",
  "git-version",
@@ -6038,7 +6037,7 @@ dependencies = [
 
 [[package]]
 name = "yellowstone-grpc-proto"
-version = "5.0.0"
+version = "5.0.0+solana.2.1.15"
 dependencies = [
  "agave-geyser-plugin-interface",
  "anyhow",

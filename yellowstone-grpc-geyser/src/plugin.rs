@@ -1,3 +1,4 @@
+use core_affinity::CoreId;
 use {
     crate::{
         config::Config,
@@ -77,7 +78,9 @@ impl GeyserPlugin for Plugin {
         }
         if let Some(tokio_cpus) = config.tokio.affinity.clone() {
             builder.on_thread_start(move || {
-                affinity::set_thread_affinity(&tokio_cpus).expect("failed to set affinity")
+                for cpu_id in &tokio_cpus {
+                    core_affinity::set_for_current(CoreId { id: *cpu_id }); // TODO check result
+                }
             });
         }
         let runtime = builder
