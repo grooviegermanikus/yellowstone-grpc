@@ -12,7 +12,7 @@ exclude = [
 
 [workspace.package]
 authors = ["Triton One"]
-edition = "2021"
+edition = "2024"
 homepage = "https://triton.one"
 repository = "https://github.com/rpcpool/yellowstone-grpc"
 license = "AGPL-3.0"
@@ -21,7 +21,7 @@ publish = false
 
 [workspace.dependencies]
 affinity = "0.1.2"
-agave-geyser-plugin-interface = "3.0.0"
+agave-geyser-plugin-interface = { path = "../solana/geyser-plugin-interface" }
 anyhow = "1.0.98"
 backoff = "0.4.0"
 base64 = "0.22.1"
@@ -55,23 +55,23 @@ prost_011 = { package = "prost", version = "0.11.9" }
 protobuf-src = "1.1.0"
 serde = "1.0.145"
 serde_json = "1.0.86"
-solana-account = "3.0.0"
-solana-account-decoder = "3.0.0"
-solana-clock = "3.0.0"
-solana-hash = "3.0.0"
-solana-keypair = "3.0.1"
-solana-logger = "3.0.0"
-solana-message = { version = "3.0.1", features = ["bincode", "blake3"] }
-solana-pubkey = "3.0.0"
-solana-signature = "3.1.0"
-solana-signer = "3.0.0"
-solana-storage-proto = "3.0.0"
-solana-transaction = "3.0.1"
-solana-transaction-context = "3.0.0"
-solana-transaction-error = "3.0.0"
-solana-transaction-status = "3.0.0"
+solana-account = { path = "../solana-sdk/account" }
+solana-account-decoder = { path = "../solana/account-decoder" }
+solana-clock = { path = "../solana-sdk/clock", default-features = false }
+solana-hash = { path = "../solana-sdk/hash" }
+solana-keypair = { path = "../solana-sdk/keypair" }
+solana-logger = { package = "agave-logger", path = "../solana/logger" }
+solana-message = { path = "../solana-sdk/message", features = ["bincode", "blake3"] }
+solana-pubkey = { path = "../solana-sdk/pubkey" }
+solana-signature = { path = "../solana-sdk/signature" }
+solana-signer = { path = "../solana-sdk/signer" }
+solana-storage-proto = { path = "../solana/storage-proto" }
+solana-transaction = { path = "../solana-sdk/transaction" }
+solana-transaction-context = { path = "../solana/transaction-context" }
+solana-transaction-error = { path = "../solana-sdk/transaction-error" }
+solana-transaction-status = { path = "../solana/transaction-status" }
 smallvec = "1.15.1"
-spl-token-2022-interface = "2.0.0"
+spl-token-2022-interface = "2.1.0"
 thiserror = "2.0.16"
 tokio = "1.47.1"
 tokio-stream = "0.1.17"
