@@ -56,7 +56,6 @@ solana-pubkey = { workspace = true }
 # Yellowstone
 yellowstone-grpc-proto = { workspace = true, features = ["convert", "plugin", "tonic", "account-data-as-bytes"] }
 
-
 [build-dependencies]
 anyhow = { workspace = true }
 cargo-lock = { workspace = true }
