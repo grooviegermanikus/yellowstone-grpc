@@ -73,6 +73,7 @@ solana-logger = "3.0.0"
 solana-storage-proto = "3.0.0"
 solana-transaction-context = "3.0.0"
 solana-transaction-status = "3.0.0"
+spl-token-2022-interface = "2.0.0"
 
 # Solana SDK
 solana-account = "3.0.0"
@@ -86,8 +87,7 @@ solana-signer = "3.0.0"
 solana-transaction = "3.0.1"
 solana-transaction-error = "3.0.0"
 
-# Solana Misc
-spl-token-2022-interface = "2.0.0"
+# Yellowstone
 yellowstone-grpc-client = { path = "yellowstone-grpc-client", version = "10.1.0" }
 yellowstone-grpc-proto = { path = "yellowstone-grpc-proto", version = "10.1.0", default-features = false }
 

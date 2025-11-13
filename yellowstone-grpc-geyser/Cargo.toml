@@ -53,9 +53,6 @@ solana-logger = { workspace = true }
 solana-clock = { workspace = true }
 solana-pubkey = { workspace = true }
 
-# Solana Misc
-# empty
-
 # Yellowstone
 yellowstone-grpc-proto = { workspace = true, features = ["convert", "plugin", "tonic", "account-data-as-bytes"] }
 

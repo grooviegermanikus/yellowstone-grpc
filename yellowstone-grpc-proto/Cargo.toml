@@ -35,6 +35,7 @@ solana-account-decoder = { workspace = true, optional = true }
 solana-storage-proto = { workspace = true, optional = true }
 solana-transaction-status = { workspace = true, optional = true }
 solana-transaction-context = { workspace = true, optional = true }
+spl-token-2022-interface = { workspace = true, optional = true }
 
 # Solana SDK
 solana-account = { workspace = true, optional = true }
@@ -45,9 +46,6 @@ solana-pubkey = { workspace = true, optional = true }
 solana-signature = { workspace = true, optional = true }
 solana-transaction = { workspace = true, optional = true }
 solana-transaction-error = { workspace = true, optional = true }
-
-# Solana Misc
-spl-token-2022-interface = { workspace = true, optional = true }
 
 [dev-dependencies]
 criterion = { workspace = true }
