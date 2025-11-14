@@ -55,20 +55,20 @@ prost_011 = { package = "prost", version = "0.11.9" }
 protobuf-src = "1.1.0"
 serde = "1.0.145"
 serde_json = "1.0.86"
-solana-account = { path = "../solana-sdk/account" }
-solana-account-decoder = { path = "../solana/account-decoder" }
-solana-clock = { path = "../solana-sdk/clock", default-features = false }
-solana-hash = { path = "../solana-sdk/hash" }
-solana-keypair = { path = "../solana-sdk/keypair" }
+solana-account = { version = "3.2.0" }
+solana-account-decoder = { version = "3.0.10" }
+solana-clock = { version = "3.0.0", default-features = false }
+solana-hash = { version = "4.0.1" }
+solana-keypair = { version = "3.1.0" }
 solana-logger = { package = "agave-logger", path = "../solana/logger" }
-solana-message = { path = "../solana-sdk/message", features = ["bincode", "blake3"] }
-solana-pubkey = { path = "../solana-sdk/pubkey" }
-solana-signature = { path = "../solana-sdk/signature" }
-solana-signer = { path = "../solana-sdk/signer" }
+solana-message = { version = "3.0.1", features = ["bincode", "blake3"] }
+solana-pubkey = { version = "4.0.0" }
+solana-signature = { version = "3.1.0" }
+solana-signer = { version = "3.0.0" }
 solana-storage-proto = { path = "../solana/storage-proto" }
-solana-transaction = { path = "../solana-sdk/transaction" }
+solana-transaction = { version = "3.0.2" }
 solana-transaction-context = { path = "../solana/transaction-context" }
-solana-transaction-error = { path = "../solana-sdk/transaction-error" }
+solana-transaction-error = { version = "3.0.0" }
 solana-transaction-status = { path = "../solana/transaction-status" }
 smallvec = "1.15.1"
 spl-token-2022-interface = "2.1.0"
