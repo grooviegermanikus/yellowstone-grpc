@@ -26,10 +26,12 @@ struct Args {
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    env::set_var(
-        env_logger::DEFAULT_FILTER_ENV,
-        env::var_os(env_logger::DEFAULT_FILTER_ENV).unwrap_or_else(|| "info".into()),
-    );
+    unsafe {
+        env::set_var(
+            env_logger::DEFAULT_FILTER_ENV,
+            env::var_os(env_logger::DEFAULT_FILTER_ENV).unwrap_or_else(|| "info".into()),
+        );
+    }
     env_logger::init();
 
     let args = Args::parse();

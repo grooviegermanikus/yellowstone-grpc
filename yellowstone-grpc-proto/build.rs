@@ -4,7 +4,7 @@ use {
 };
 
 fn main() -> anyhow::Result<()> {
-    std::env::set_var("PROTOC", protobuf_src::protoc());
+    unsafe { std::env::set_var("PROTOC", protobuf_src::protoc()); }
 
     // build protos
     #[cfg(feature = "account-data-as-bytes")]
